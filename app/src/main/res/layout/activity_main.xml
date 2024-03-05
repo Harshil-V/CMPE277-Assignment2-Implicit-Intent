@@ -132,4 +132,17 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_phone"
         app:layout_constraintVertical_bias="0.355" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="90dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_url"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/san_jose_state_spartans_logo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
