@@ -81,7 +81,7 @@
         android:id="@+id/tv_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="68dp"
         android:text="Phone #:"
         android:textColor="@color/yellow"
         android:textSize="21sp"
@@ -93,7 +93,7 @@
     <EditText
         android:id="@+id/et_phone"
         android:layout_width="221dp"
-        android:layout_height="41dp"
+        android:layout_height="48dp"
         android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="(XXX) XXX - XXXX"
@@ -143,6 +143,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/san_jose_state_spartans_logo" />
+        app:srcCompat="@drawable/san_jose_state_spartans_logo"
+        android:contentDescription="SJSU LOGO" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

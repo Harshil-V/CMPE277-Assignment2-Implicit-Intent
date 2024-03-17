@@ -32,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
 
         openURLBtn.setOnClickListener(v -> {
             String url = urlLinkEditText.getText().toString();
-            Toast.makeText(MainActivity.this, url, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), url, Toast.LENGTH_SHORT).show();
             goToUrl(url);
         });
 
         ringPhoneBtn.setOnClickListener(v -> {
             String phoneNumber = phoneNumberEditText.getText().toString();
-            Toast.makeText(MainActivity.this, phoneNumber, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), phoneNumber, Toast.LENGTH_SHORT).show();
             makePhoneCall(phoneNumber);
         });
 
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private void makePhoneCall(String phoneNumber) {
         Intent intent = new Intent(Intent.ACTION_CALL);
         intent.setData(Uri.parse("tel:" + phoneNumber));
-        if (ContextCompat.checkSelfPermission(MainActivity.this, android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{android.Manifest.permission.CALL_PHONE}, 1);
         } else {
             startActivity(intent);
