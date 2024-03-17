@@ -15,8 +15,8 @@ import androidx.core.content.ContextCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText urlLinkEditText;
-    EditText phoneNumberEditText;
+    private EditText urlLinkEditText;
+    private  EditText phoneNumberEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +45,13 @@ public class MainActivity extends AppCompatActivity {
         exitBtn.setOnClickListener(v -> finishAffinity());
     }
 
+    /**
+     * Initiates a phone call to the specified phone number.
+     * Requires the CALL_PHONE permission. If the permission is not granted,
+     * it requests the permission from the user.
+     *
+     * @param phoneNumber The phone number to call.
+     */
     private void makePhoneCall(String phoneNumber) {
         Intent intent = new Intent(Intent.ACTION_CALL);
         intent.setData(Uri.parse("tel:" + phoneNumber));
@@ -55,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Opens the specified URL in a web browser.
+     *
+     * @param url The URL to open.
+     */
     private void goToUrl(String url) {
         Uri uri = Uri.parse(url);
         startActivity(new Intent(Intent.ACTION_VIEW, uri));
